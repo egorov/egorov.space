@@ -2,13 +2,8 @@ function makeRandomDigitsString() {
 
   const parts = [];
 
-  for(let index = 0; index < 5; index += 1) {
-
-    const fraction = Math.random();
-    const fractional = fraction.toString().split('.')[1];
-    const integer = Number.parseInt(fractional);
-    
-    parts.push(integer);
+  while(parts.length < 5) {
+    parts.push(Math.random().toString().slice(2));
   }
 
   return parts.join('');
